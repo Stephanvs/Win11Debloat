@@ -1154,6 +1154,7 @@ if ((-not $global:Params.Count) -or $RunDefaults -or $RunWin11Defaults -or ($SPP
 
                         if ($paramName -eq "RemoveAppsCustom") {
                             # If paramName is RemoveAppsCustom, check if CustomAppsFile exists
+                            Write-Debug "Checking if 'CustomAppsList' exists in location: '$PSScriptRoot'"
                             if (Test-Path "$PSScriptRoot/CustomAppsList") {
                                 # Apps file exists, print list of apps
                                 $appsList = @()
